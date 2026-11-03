@@ -2,11 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Kelly Cestari</title>
+  <meta name="description" content="Photography and AI work by Kelly Cestari.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@1,9..144,300..500,100&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #0d3a50;      /* deep water blue, taken from the wave */
+      --sky: #b2cae3;      /* the sky, shown while the photo loads */
+      /* Which part of the photo stays in view when the screen crops it.
+         First number = left/right (54% keeps the surfer centred on phones),
+         second = up/down (0% keeps all the sky for the words). */
+      --focus: 54% 0%;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #0d3a50; --sky: #b2cae3; }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      background: var(--sky);
+      font-family: "Fraunces", Georgia, "Times New Roman", serif;
+      overflow: hidden;
+    }
+
+    .stage {
+      position: relative;
+      height: 100vh;
+      height: 100dvh;
+      width: 100%;
+    }
+
+    .stage img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: var(--focus);
+    }
+
+    .line {
+      position: absolute;
+      z-index: 1;
+      left: max(6vw, env(safe-area-inset-left, 0px) + 1.5rem);
+      right: max(6vw, env(safe-area-inset-right, 0px) + 1.5rem);
+      top: max(6vh, env(safe-area-inset-top, 0px) + 1.5rem);
+      color: var(--ink);
+      font-style: italic;
+      font-weight: 350;
+      font-variation-settings: "SOFT" 100, "opsz" 144;
+      font-size: clamp(1.7rem, 3.4vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.005em;
+      opacity: 0;
+      animation: arrive 1.6s ease-out 0.4s forwards;
+    }
+
+    /* The four dots take turns, like someone tapping their foot */
+    .dots span {
+      display: inline-block;
+      animation: wait 2.4s ease-in-out 2s infinite;
+    }
+    .dots span:nth-child(2) { animation-delay: 2.25s; }
+    .dots span:nth-child(3) { animation-delay: 2.5s; }
+    .dots span:nth-child(4) { animation-delay: 2.75s; }
+
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(0.4em); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes wait {
+      0%, 60%, 100% { opacity: 1; }
+      30%           { opacity: 0.2; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .line { animation: none; opacity: 1; }
+      .dots span { animation: none; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Kelly Cestari</h1>
-  <p>Website under maintenance.</p>
+  <main class="stage">
+    <img src="kellycestari_homepage_web.jpg" alt="A lone surfer sits on their board in deep blue water as a huge wave rises behind them, spray blowing off its crest.">
+    <h1 class="line"><span class="dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span><span>.</span></span> just waiting for a mate</h1>
+  </main>
 </body>
 </html>
