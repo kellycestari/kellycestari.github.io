@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pirate Life | Kelly Cestari Creative</title>
+  <!-- Pitch page: kept out of search results, just like on Wix -->
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f6f5f2;
+      --ink: #16181b;
+      --muted: #5d6166;
+      --rule: #dcdad4;
+      --tile: #ebe9e4;
+            --h-small: clamp(84px, 10vw, 140px); /* "existing imagery" thumbnails */
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+      font-variation-settings: "wdth" 100;
+      -webkit-font-smoothing: antialiased;
+      padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+    }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
+
+    header.top {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 28px 0 18px; border-bottom: 1px solid var(--rule);
+      font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    header.top a { color: var(--ink); text-decoration: none; font-weight: 600; }
+    header.top span { color: var(--muted); }
+
+    .block { padding: clamp(48px, 8vw, 96px) 0 8px; border-bottom: 1px solid var(--rule); }
+    .block:last-of-type { border-bottom: 0; }
+    .intro { max-width: 58ch; color: var(--muted); font-size: clamp(0.95rem, 1.2vw, 1.05rem); line-height: 1.55; }
+    h2 {
+      margin: 10px 0 28px;
+      font-size: clamp(2.4rem, 7vw, 5.6rem);
+      font-weight: 800;
+      font-variation-settings: "wdth" 70;
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    h3 {
+      margin: 26px 0 12px;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Each row lines its images up at one shared height, edge to edge,
+       keeping every image at its natural shape (nothing is cropped). */
+    .row { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .row > * { flex: 1 1 0; min-width: 0; }
+    .row img, .row video { width: 100%; height: auto; display: block; background: var(--tile); }
+    .row img { cursor: zoom-in; }
+    /* "Existing imagery" thumbnails stay small and don't stretch */
+    .row--small > * { flex: 0 0 auto; }
+    .row--small img, .row--small video { width: auto; height: var(--h-small); }
+
+    @media (max-width: 640px) {
+      .row { flex-wrap: wrap; }
+      .row > * { flex: 0 0 calc((100% - 20px) / 3) !important; }
+      .row--large > *, .row--wide > *, .row > :only-child { flex-basis: 100% !important; }
+      .row--small > * { flex: 0 0 auto !important; }
+    }
+
+    /* Pirate Life: long product names, so smaller headings with the tagline beneath */
+    h2 { font-size: clamp(1.9rem, 4.6vw, 3.9rem); line-height: 0.98; margin: 0 0 12px; max-width: 22ch; }
+    .tag { color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.2rem); margin-bottom: 8px; }
+    .row--wide { margin-top: 40px; }
+
+    footer { padding: 56px 0 64px; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    footer a { color: var(--ink); }
+
+    /* Click-to-enlarge */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 10; display: none;
+      align-items: center; justify-content: center;
+      background: rgba(22, 24, 27, 0.92); cursor: zoom-out; padding: 4vmin;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a href="/">Kelly Cestari Creative</a>
+      <span>Pirate Life</span>
+    </header>
+
+<section class="block">
+  <h2>PL x More Greens Hat + Est. 2014 Oversized Tee - White</h2>
+  <p class="tag">From 3 images to a campaign worth of content.</p>
+  <h3>Your Existing Imagery</h3>
+  <div class="row row--small">
+    <img src="images/more-greens-2.webp" alt="More Greens 2" loading="lazy">
+    <img src="images/more-greens-1.webp" alt="More Greens 1" loading="lazy">
+    <img src="images/more-greens-3.webp" alt="More Greens 3" loading="lazy">
+    <img src="images/est14-white-front.webp" alt="Est14 White Front" loading="lazy">
+    <img src="images/est14-white-back.webp" alt="Est14 White Back" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/more-greens-new-6.webp" alt="More Greens new 6" loading="lazy">
+    <img src="images/more-greens-new-11.webp" alt="More Greens new 11" loading="lazy">
+    <img src="images/more-greens-new-5.webp" alt="More Greens new 5" loading="lazy">
+    <img src="images/more-greens-new-1.webp" alt="More Greens new 1" loading="lazy">
+    <img src="images/more-greens-new-3.webp" alt="More Greens new 3" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/more-greens-new-8.webp" alt="More Greens new 8" loading="lazy">
+    <img src="images/more-greens-new-9.webp" alt="More Greens new 9" loading="lazy">
+    <img src="images/more-greens-new-7.webp" alt="More Greens new 7" loading="lazy">
+    <img src="images/more-greens-new-4.webp" alt="More Greens new 4" loading="lazy">
+    <img src="images/more-greens-new-10.webp" alt="More Greens new 10" loading="lazy">
+  </div>
+</section>
+<section class="block">
+  <h2>Women&#x27;s PL Cropped Hoodie</h2>
+  <p class="tag">From 2 images to a campaign worth of content.</p>
+  <h3>Your Existing Imagery</h3>
+  <div class="row row--small">
+    <img src="images/pl-crop-pink-front.webp" alt="PL Crop Pink Front" loading="lazy">
+    <img src="images/pl-crop-pink-back.webp" alt="PL Crop Pink Back" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/pl-crop-pink-12.webp" alt="PL Crop Pink 12" loading="lazy">
+    <img src="images/pl-crop-pink-14.webp" alt="PL Crop Pink 14" loading="lazy">
+    <img src="images/pl-crop-pink-6.webp" alt="PL Crop Pink 6" loading="lazy">
+    <img src="images/pl-crop-pink-5.webp" alt="PL Crop Pink 5" loading="lazy">
+    <img src="images/pl-crop-pink-7.webp" alt="PL Crop Pink 7" loading="lazy">
+    <img src="images/pl-crop-pink-4.webp" alt="PL Crop Pink 4" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/pl-crop-pink-17.webp" alt="PL Crop Pink 17" loading="lazy">
+    <img src="images/pl-crop-pink-18.webp" alt="PL Crop Pink 18" loading="lazy">
+    <img src="images/pl-crop-pink-10.webp" alt="PL Crop Pink 10" loading="lazy">
+    <img src="images/pl-crop-pink-3.webp" alt="PL Crop Pink 3" loading="lazy">
+    <img src="images/pl-crop-pink-20.webp" alt="PL Crop Pink 20" loading="lazy">
+    <img src="images/pl-crop-pink-19.webp" alt="PL Crop Pink 19" loading="lazy">
+  </div>
+</section>
+<section class="block">
+  <h2>Artist Series #16 T-Shirt - Mitch Walder + Est. 2014 Oversized Tee - Black</h2>
+  <p class="tag">From 4 images to a campaign worth of content.</p>
+  <h3>Your Existing Imagery</h3>
+  <div class="row row--small">
+    <img src="images/est14-black-front.webp" alt="Est14 Black Front" loading="lazy">
+    <img src="images/est14-black-back.webp" alt="Est14 Black Back" loading="lazy">
+    <img src="images/mitchteeback.webp" alt="MitchTeeBack" loading="lazy">
+    <img src="images/mitchteefront.webp" alt="MitchTeeFront" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/est14-black-2.webp" alt="Est14 Black 2" loading="lazy">
+    <img src="images/est14-black-1.webp" alt="Est14 Black 1" loading="lazy">
+    <img src="images/est14-black-4.webp" alt="Est14 Black 4" loading="lazy">
+    <img src="images/est14-black-3.webp" alt="Est14 Black 3" loading="lazy">
+    <video src="videos/0127e8f3.mp4" poster="videos/0127e8f3.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <div class="row">
+    <img src="images/mitchtee-6.webp" alt="MitchTee 6" loading="lazy">
+    <img src="images/mitchtee-5.webp" alt="MitchTee 5" loading="lazy">
+    <img src="images/mitchtee-3.webp" alt="MitchTee 3" loading="lazy">
+    <img src="images/mitchtee-2.webp" alt="MitchTee 2" loading="lazy">
+    <video src="videos/5bd46a7b.mp4" poster="videos/5bd46a7b.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+</section>
+<section class="block">
+  <h2>Est. 2014 Hoodie</h2>
+  <p class="tag">From 2 images to a campaign worth of content to changing models.</p>
+  <h3>Your Existing Imagery</h3>
+  <div class="row row--small">
+    <img src="images/est-2014-hoodie-back.webp" alt="Est 2014 Hoodie BACK" loading="lazy">
+    <img src="images/est-2014-hoodie-front.webp" alt="Est 2014 Hoodie FRONT" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/est-2014-hoodie-6.webp" alt="EST. 2014 HOODIE-6" loading="lazy">
+    <img src="images/est-2014-hoodie-10.webp" alt="EST. 2014 HOODIE-10" loading="lazy">
+    <img src="images/est-2014-hoodie-8.webp" alt="EST. 2014 HOODIE-8" loading="lazy">
+    <img src="images/est-2014-hoodie-7.webp" alt="EST. 2014 HOODIE-7" loading="lazy">
+    <img src="images/est-2014-hoodie-1.webp" alt="EST. 2014 HOODIE-1" loading="lazy">
+    <img src="images/est-2014-hoodie-5.webp" alt="EST. 2014 HOODIE-5" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/est-2014-hoodie-4.webp" alt="EST. 2014 HOODIE-4" loading="lazy">
+    <img src="images/est-2014-hoodie-2.webp" alt="EST. 2014 HOODIE-2" loading="lazy">
+    <img src="images/est-2014-hoodie-11.webp" alt="EST. 2014 HOODIE-11" loading="lazy">
+    <img src="images/est-2014-hoodie-15.webp" alt="EST. 2014 HOODIE-15" loading="lazy">
+    <img src="images/est-2014-hoodie-14.webp" alt="EST. 2014 HOODIE-14" loading="lazy">
+    <img src="images/est-2014-hoodie-12.webp" alt="EST. 2014 HOODIE-12" loading="lazy">
+  </div>
+</section>
+<section class="block">
+  <h2>Pirate Life Brewing Beanie + Pirate Life Crew</h2>
+  <p class="tag">From 2 images to a campaign worth of content.</p>
+  <h3>Your Existing Imagery</h3>
+  <div class="row row--small">
+    <img src="images/greymarle-beanie-flexfit-front.webp" alt="GreyMarle Beanie FlexFit Front" loading="lazy">
+    <img src="images/crewgrey-front.webp" alt="CrewGrey Front" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/pirate-life-brewing-beanie-pirate-life-crew-2.webp" alt="PIRATE LIFE BREWING BEANIE + PIRATE LIFE CREW-2" loading="lazy">
+    <img src="images/pirate-life-brewing-beanie-pirate-life-crew-1.webp" alt="PIRATE LIFE BREWING BEANIE + PIRATE LIFE CREW-1" loading="lazy">
+    <img src="images/pirate-life-brewing-beanie-pirate-life-crew-3.webp" alt="PIRATE LIFE BREWING BEANIE + PIRATE LIFE CREW-3" loading="lazy">
+    <img src="images/pirate-life-brewing-beanie-pirate-life-crew-6.webp" alt="PIRATE LIFE BREWING BEANIE + PIRATE LIFE CREW-6" loading="lazy">
+    <img src="images/pirate-life-brewing-beanie-pirate-life-crew-4.webp" alt="PIRATE LIFE BREWING BEANIE + PIRATE LIFE CREW-4" loading="lazy">
+    <img src="images/pirate-life-brewing-beanie-pirate-life-crew-5.webp" alt="PIRATE LIFE BREWING BEANIE + PIRATE LIFE CREW-5" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/pirate-life-brewing-beanie-pirate-life-crew-8.webp" alt="PIRATE LIFE BREWING BEANIE + PIRATE LIFE CREW-8" loading="lazy">
+  </div>
+</section>
+<section class="block">
+  <h2>Pirate Life Pom Pom Beanie + South Coast Varsity Crew</h2>
+  <p class="tag">From 3 images to a campaign worth of content.</p>
+  <div class="row">
+    <img src="images/pirate-life-pom-pom-beanie-south-coast-varsity-crew-2.webp" alt="PIRATE LIFE POM POM BEANIE + SOUTH COAST VARSITY CREW-2" loading="lazy">
+    <img src="images/pirate-life-pom-pom-beanie-south-coast-varsity-crew-1.webp" alt="PIRATE LIFE POM POM BEANIE + SOUTH COAST VARSITY CREW-1" loading="lazy">
+  </div>
+  <h3>Your Existing Imagery</h3>
+  <div class="row row--small">
+    <img src="images/black-beanie-mitchells-front.webp" alt="Black Beanie Mitchells Front" loading="lazy">
+    <img src="images/black-beanie-mitchells-back.webp" alt="Black Beanie Mitchells Back" loading="lazy">
+    <img src="images/sc-varsitycrew-white.webp" alt="SC VarsityCrew-White" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/pirate-life-pom-pom-beanie-south-coast-varsity-crew-4.webp" alt="PIRATE LIFE POM POM BEANIE + SOUTH COAST VARSITY CREW-4" loading="lazy">
+    <img src="images/pirate-life-pom-pom-beanie-south-coast-varsity-crew-3.webp" alt="PIRATE LIFE POM POM BEANIE + SOUTH COAST VARSITY CREW-3" loading="lazy">
+    <img src="images/pirate-life-pom-pom-beanie-south-coast-varsity-crew-9.webp" alt="PIRATE LIFE POM POM BEANIE + SOUTH COAST VARSITY CREW-9" loading="lazy">
+  </div>
+</section>
+<section class="block">
+  <h2>Pirate Life Perth Bee T-Shirt + Est. 2014 Oversized Tee - Black + Endless Opportunities</h2>
+  <p class="tag">From 3 images to endless opportunities.</p>
+  <h3>Your Existing Imagery</h3>
+  <div class="row row--small">
+    <img src="images/plp-bees-back.webp" alt="PLP Bees Back" loading="lazy">
+    <img src="images/mitchteefront.webp" alt="MitchTeeFront" loading="lazy">
+    <img src="images/est14-black-back.webp" alt="Est14 Black Back" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/plp-bees-1.webp" alt="PLP Bees 1" loading="lazy">
+    <img src="images/plp-bees-2.webp" alt="PLP Bees 2" loading="lazy">
+    <img src="images/plp-bees-3.webp" alt="PLP Bees 3" loading="lazy">
+    <img src="images/artist-series-16-t-shirt-mitch-walder-pirate.webp" alt="ARTIST SERIES #16 T-SHIRT - MITCH WALDER Pirate" loading="lazy">
+    <img src="images/est-2014-oversized-tee-black-pirate.webp" alt="EST. 2014 OVERSIZED TEE - BLACK Pirate" loading="lazy">
+  </div>
+  <div class="row row--wide">
+    <img src="images/pirate-life-campaign.webp" alt="Pirate Life campaign" loading="lazy">
+  </div>
+</section>
+
+    <footer><a href="/">kellycestari.com</a></footer>
+  </div>
+
+  <div class="lightbox" aria-hidden="true"><img alt=""></div>
+  <script>
+    // Size each item by its shape so a row fills the width at one height
+    const fit = (el, w, h) => { if (w && h) el.style.flexGrow = (w / h).toFixed(4); };
+    document.querySelectorAll('.row:not(.row--small) img').forEach(img => {
+      const go = () => fit(img, img.naturalWidth, img.naturalHeight);
+      img.complete ? go() : img.addEventListener('load', go);
+    });
+    document.querySelectorAll('.row:not(.row--small) video').forEach(v => {
+      const go = () => fit(v, v.videoWidth, v.videoHeight);
+      v.readyState >= 1 ? go() : v.addEventListener('loadedmetadata', go);
+    });
+
+    // Keep rows with only one or two portraits from towering over the page
+    const MAXH = 520;
+    document.querySelectorAll('.row:not(.row--small):not(.row--wide)').forEach(row => {
+      const items = [...row.children];
+      const cap = () => {
+        const sum = items.reduce((t, el) => t + (parseFloat(el.style.flexGrow) || 0), 0);
+        if (items.every(el => el.style.flexGrow)) row.style.maxWidth = (sum * MAXH + 10 * (items.length - 1)) + 'px';
+      };
+      items.forEach(el => el.addEventListener(el.tagName === 'VIDEO' ? 'loadedmetadata' : 'load', () => setTimeout(cap)));
+      setTimeout(cap, 50);
+    });
+
+    const box = document.querySelector('.lightbox');
+    const big = box.querySelector('img');
+    document.querySelectorAll('.row img').forEach(img => {
+      img.addEventListener('click', () => { big.src = img.src; big.alt = img.alt; box.classList.add('open'); });
+    });
+    box.addEventListener('click', () => box.classList.remove('open'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') box.classList.remove('open'); });
+  </script>
+</body>
+</html>
