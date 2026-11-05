@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TWL | Kelly Cestari Creative</title>
+  <!-- Pitch page: kept out of search results, just like on Wix -->
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f6f5f2;
+      --ink: #16181b;
+      --muted: #5d6166;
+      --rule: #dcdad4;
+      --tile: #ebe9e4;
+            --h-small: clamp(84px, 10vw, 140px); /* "existing imagery" thumbnails */
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+      font-variation-settings: "wdth" 100;
+      -webkit-font-smoothing: antialiased;
+      padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+    }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
+
+    header.top {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 28px 0 18px; border-bottom: 1px solid var(--rule);
+      font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    header.top a { color: var(--ink); text-decoration: none; font-weight: 600; }
+    header.top span { color: var(--muted); }
+
+    .block { padding: clamp(48px, 8vw, 96px) 0 8px; border-bottom: 1px solid var(--rule); }
+    .block:last-of-type { border-bottom: 0; }
+    .intro { max-width: 58ch; color: var(--muted); font-size: clamp(0.95rem, 1.2vw, 1.05rem); line-height: 1.55; }
+    h2 {
+      margin: 10px 0 28px;
+      font-size: clamp(2.4rem, 7vw, 5.6rem);
+      font-weight: 800;
+      font-variation-settings: "wdth" 70;
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    h3 {
+      margin: 26px 0 12px;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Each row lines its images up at one shared height, edge to edge,
+       keeping every image at its natural shape (nothing is cropped). */
+    .row { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .row > * { flex: 1 1 0; min-width: 0; }
+    .row img, .row video { width: 100%; height: auto; display: block; background: var(--tile); }
+    .row img { cursor: zoom-in; }
+    /* "Existing imagery" thumbnails stay small and don't stretch */
+    .row--small > * { flex: 0 0 auto; }
+    .row--small img, .row--small video { width: auto; height: var(--h-small); }
+
+    @media (max-width: 640px) {
+      .row { flex-wrap: wrap; }
+      .row > * { flex: 0 0 calc((100% - 20px) / 3) !important; }
+      .row--large > *, .row--wide > * { flex-basis: 100% !important; }
+      .row--small > * { flex: 0 0 auto !important; }
+    }
+
+    footer { padding: 56px 0 64px; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    footer a { color: var(--ink); }
+
+    /* Click-to-enlarge */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 10; display: none;
+      align-items: center; justify-content: center;
+      background: rgba(22, 24, 27, 0.92); cursor: zoom-out; padding: 4vmin;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a href="/">Kelly Cestari Creative</a>
+      <span>TWL</span>
+    </header>
+
+<section class="block">
+  <p class="intro">Change apparel prints, or patterns on existing product images to quickly test new ideas, gather visual feedback, and explore range updates before committing to production.</p>
+  <h2>Design Mockups</h2>
+  <h3>Your Existing Imagery</h3>
+  <div class="row row--small">
+    <img src="images/color-model-swap-f1.webp" alt="Color + Model swap F1" loading="lazy">
+    <img src="images/color-model-swap-f2.webp" alt="Color + Model swap F2" loading="lazy">
+    <img src="images/color-model-swap-f3.webp" alt="Color + Model swap F3" loading="lazy">
+    <img src="images/color-model-swap-f5.webp" alt="Color + Model swap F5" loading="lazy">
+    <img src="images/color-model-swap-f4.webp" alt="Color + Model swap F4" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/color-model-swap-f6.webp" alt="Color + Model swap F6" loading="lazy">
+    <img src="images/color-model-swap-f7.webp" alt="Color + Model swap F7" loading="lazy">
+    <img src="images/color-model-swap-f8.webp" alt="Color + Model swap F8" loading="lazy">
+    <img src="images/color-model-swap-f9.webp" alt="Color + Model swap F9" loading="lazy">
+    <img src="images/color-model-swap-f10.webp" alt="Color + Model swap F10" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/color-model-swap-f11.webp" alt="Color + Model swap F11" loading="lazy">
+    <img src="images/color-model-swap-f12.webp" alt="Color + Model swap F12" loading="lazy">
+    <img src="images/color-model-swap-f13.webp" alt="Color + Model swap F13" loading="lazy">
+    <img src="images/color-model-swap-f14.webp" alt="Color + Model swap F14" loading="lazy">
+    <img src="images/color-model-swap-f15.webp" alt="Color + Model swap F15" loading="lazy">
+  </div>
+</section>
+<section class="block">
+  <p class="intro">Change apparel prints, or patterns or models on existing product images to quickly test new ideas, gather visual feedback, and explore range updates before committing to production.</p>
+  <h2>Design Mockups</h2>
+  <h3>Your Existing Imagery + New Design in motion</h3>
+  <div class="row">
+    <img src="images/knee-sleeve-original-front.webp" alt="Knee Sleeve original front" loading="lazy">
+    <img src="images/knee-sleeve-1-front.webp" alt="Knee Sleeve 1 front" loading="lazy">
+    <img src="images/knee-sleeve-original-back.webp" alt="Knee Sleeve original back" loading="lazy">
+    <img src="images/knee-sleeve-1-back.webp" alt="Knee Sleeve 1 back" loading="lazy">
+    <video src="videos/ff31bc19.mp4" poster="videos/ff31bc19.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <video src="videos/027a3d4e.mp4" poster="videos/027a3d4e.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <div class="row">
+    <img src="images/knee-sleeve-2-front.webp" alt="Knee Sleeve 2 front" loading="lazy">
+    <img src="images/knee-sleeve-2-back.webp" alt="Knee Sleeve 2 back" loading="lazy">
+    <video src="videos/4ba418ed.mp4" poster="videos/4ba418ed.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+</section>
+<section class="block">
+  <p class="intro">Change apparel colours to quickly test new ideas, gather visual feedback, and explore range updates before committing to production.</p>
+  <h2>Colorway Changes</h2>
+  <h3>Existing Imagery (black) + new Chocolate colorway</h3>
+  <div class="row">
+    <img src="images/color-change-7.webp" alt="Color Change 7" loading="lazy">
+    <img src="images/color-change-1.webp" alt="Color Change 1" loading="lazy">
+    <img src="images/color-change-8.webp" alt="Color Change 8" loading="lazy">
+    <img src="images/color-change-2.webp" alt="Color Change 2" loading="lazy">
+    <img src="images/color-change-4.webp" alt="Color Change 4" loading="lazy">
+    <img src="images/color-change-6.webp" alt="Color Change 6" loading="lazy">
+    <video src="videos/ef4fdebb.mp4" poster="videos/ef4fdebb.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <div class="row">
+    <img src="images/color-change-9.webp" alt="Color Change 9" loading="lazy">
+    <img src="images/color-change-11.webp" alt="Color Change 11" loading="lazy">
+    <img src="images/color-change-13.webp" alt="Color Change 13" loading="lazy">
+    <video src="videos/87311273.mp4" poster="videos/87311273.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+</section>
+<section class="block">
+  <p class="intro">Refresh your existing product imagery with new models for a fresh look, showcase different customer types, and extend the life of your content without needing a full new shoot.</p>
+  <h2>Refresh Models</h2>
+  <div class="row">
+    <img src="images/model-apparel-swap-1.webp" alt="Model+Apparel SWAP 1" loading="lazy">
+    <img src="images/model-apparel-swap-4.webp" alt="Model+Apparel SWAP 4" loading="lazy">
+    <img src="images/model-apparel-swap-6.webp" alt="Model+Apparel SWAP 6" loading="lazy">
+    <img src="images/model-apparel-swap-3.webp" alt="Model+Apparel SWAP 3" loading="lazy">
+    <video src="videos/165269e8.mp4" poster="videos/165269e8.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <h3>Old model vs New model + New color change &amp; New Model</h3>
+  <div class="row">
+    <img src="images/model-diversity-1.webp" alt="Model Diversity 1" loading="lazy">
+    <img src="images/model-diversity-4.webp" alt="Model Diversity 4" loading="lazy">
+    <img src="images/model-diversity-6.webp" alt="Model Diversity 6" loading="lazy">
+    <img src="images/model-diversity-3.webp" alt="Model Diversity 3" loading="lazy">
+    <video src="videos/bd7870c9.mp4" poster="videos/bd7870c9.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <div class="row">
+    <img src="images/model-apparel-swap-7.webp" alt="Model+Apparel SWAP 7" loading="lazy">
+    <img src="images/model-apparel-swap-10.webp" alt="Model+Apparel SWAP 10" loading="lazy">
+    <img src="images/model-apparel-swap-12.webp" alt="Model+Apparel SWAP 12" loading="lazy">
+    <img src="images/model-apparel-swap-9.webp" alt="Model+Apparel SWAP 9" loading="lazy">
+    <video src="videos/6825fc50.mp4" poster="videos/6825fc50.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+</section>
+<section class="block">
+  <p class="intro">Turn a single graphic or logo into a complete product catalogue of high-quality images, perfect for testing new graphic tee designs, building range additions, or launching products before stock arrives.</p>
+  <h2>Product Development</h2>
+  <div class="row">
+    <img src="images/design-flatlay-model-worn-18.webp" alt="Design-Flatlay-Model-Worn 18" loading="lazy">
+    <img src="images/design-flatlay-model-worn-17.webp" alt="Design-Flatlay-Model-Worn 17" loading="lazy">
+    <img src="images/design-flatlay-model-worn-26.webp" alt="Design-Flatlay-Model-Worn 26" loading="lazy">
+    <img src="images/design-flatlay-model-worn-19.webp" alt="Design-Flatlay-Model-Worn 19" loading="lazy">
+    <img src="images/design-flatlay-model-worn-21.webp" alt="Design-Flatlay-Model-Worn 21" loading="lazy">
+  </div>
+  <h3>Six Assets</h3>
+  <div class="row row--small">
+    <img src="images/design-flatlay-model-worn-15.webp" alt="Design-Flatlay-Model-Worn 15" loading="lazy">
+    <img src="images/design-flatlay-model-worn-16.webp" alt="Design-Flatlay-Model-Worn 16" loading="lazy">
+    <img src="images/design-flatlay-model-worn-17asdf.webp" alt="Design-Flatlay-Model-Worn 17asdf" loading="lazy">
+    <img src="images/design-flatlay-model-worn-18fda.webp" alt="Design-Flatlay-Model-Worn 18fda" loading="lazy">
+    <img src="images/design-flatlay-model-worn-1.webp" alt="Design-Flatlay-Model-Worn 1" loading="lazy">
+    <img src="images/design-flatlay-model-worn-2.webp" alt="Design-Flatlay-Model-Worn 2" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/design-flatlay-model-worn-23.webp" alt="Design-Flatlay-Model-Worn 23" loading="lazy">
+    <img src="images/design-flatlay-model-worn-29.webp" alt="Design-Flatlay-Model-Worn 29" loading="lazy">
+    <img src="images/design-flatlay-model-worn-24.webp" alt="Design-Flatlay-Model-Worn 24" loading="lazy">
+    <video src="videos/dd85e661.mp4" poster="videos/dd85e661.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <div class="row">
+    <img src="images/design-flatlay-model-worn-28.webp" alt="Design-Flatlay-Model-Worn 28" loading="lazy">
+    <img src="images/design-flatlay-model-worn-40.webp" alt="Design-Flatlay-Model-Worn 40" loading="lazy">
+    <img src="images/design-flatlay-model-worn-32.webp" alt="Design-Flatlay-Model-Worn 32" loading="lazy">
+    <img src="images/design-flatlay-model-worn-34.webp" alt="Design-Flatlay-Model-Worn 34" loading="lazy">
+    <img src="images/design-flatlay-model-worn-30.webp" alt="Design-Flatlay-Model-Worn 30" loading="lazy">
+    <img src="images/design-flatlay-model-worn-33.webp" alt="Design-Flatlay-Model-Worn 33" loading="lazy">
+    <video src="videos/1e632a46.mp4" poster="videos/1e632a46.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <div class="row">
+    <img src="images/design-flatlay-model-worn.png" alt="Design-Flatlay-Model-Worn" loading="lazy">
+    <img src="images/design-flatlay-model-worn-4.webp" alt="Design-Flatlay-Model-Worn 4" loading="lazy">
+    <img src="images/design-flatlay-model-worn-13.webp" alt="Design-Flatlay-Model-Worn 13" loading="lazy">
+    <img src="images/design-flatlay-model-worn-5.webp" alt="Design-Flatlay-Model-Worn 5" loading="lazy">
+    <img src="images/design-flatlay-model-worn-11.webp" alt="Design-Flatlay-Model-Worn 11" loading="lazy">
+    <img src="images/design-flatlay-model-worn-7.webp" alt="Design-Flatlay-Model-Worn 7" loading="lazy">
+    <img src="images/design-flatlay-model-worn-8.webp" alt="Design-Flatlay-Model-Worn 8" loading="lazy">
+    <video src="videos/461a9927.mp4" poster="videos/461a9927.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+</section>
+<section class="block">
+  <p class="intro">Create tailored content for yours and others brands, keeping each range visually unique while maintaining a consistent level of quality, style, and professional product presentation.</p>
+  <h2>Activ + Hyrox</h2>
+  <div class="row">
+    <img src="images/activ-rmu-gloss-tortoise-5.webp" alt="ACTIV - RMU GLOSS TORTOISE-5" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-6.webp" alt="ACTIV - RMU GLOSS TORTOISE-6" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-8.webp" alt="ACTIV - RMU GLOSS TORTOISE-8" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-11.webp" alt="ACTIV - RMU GLOSS TORTOISE-11" loading="lazy">
+  </div>
+  <h3>Your Existing Imagery</h3>
+  <div class="row row--small">
+    <img src="images/activ-rmu-gloss-tortoise-1.webp" alt="ACTIV - RMU GLOSS TORTOISE-1" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-2.webp" alt="ACTIV - RMU GLOSS TORTOISE-2" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-3.webp" alt="ACTIV - RMU GLOSS TORTOISE-3" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-4.webp" alt="ACTIV - RMU GLOSS TORTOISE-4" loading="lazy">
+    <img src="images/hyrox.webp" alt="Hyrox" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/activ-rmu-gloss-tortoise-13.webp" alt="ACTIV - RMU GLOSS TORTOISE-13" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-16.webp" alt="ACTIV - RMU GLOSS TORTOISE-16" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-12.jpg" alt="ACTIV - RMU GLOSS TORTOISE-12" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-15.webp" alt="ACTIV - RMU GLOSS TORTOISE-15" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/activ-rmu-gloss-tortoise-9.jpg" alt="ACTIV - RMU GLOSS TORTOISE-9" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-10.webp" alt="ACTIV - RMU GLOSS TORTOISE-10" loading="lazy">
+    <img src="images/activ-rmu-gloss-tortoise-14.webp" alt="ACTIV - RMU GLOSS TORTOISE-14" loading="lazy">
+  </div>
+  <div class="row row--large">
+    <img src="images/hyrox-2.webp" alt="HYROX-2" loading="lazy">
+    <img src="images/hyrox-1.jpg" alt="HYROX-1" loading="lazy">
+  </div>
+</section>
+<section class="block">
+  <p class="intro">Create custom fitness models that match your brand, product style, and target customer, giving you tailored visuals without the limits of a traditional photoshoot.</p>
+  <h2>Custom Fitness Models</h2>
+  <div class="row">
+    <img src="images/custom-models-2.webp" alt="Custom Models 2" loading="lazy">
+    <img src="images/custom-model-29.webp" alt="Custom Model 29" loading="lazy">
+    <img src="images/custom-models-8.webp" alt="Custom Models 8" loading="lazy">
+    <img src="images/custom-models-4.webp" alt="Custom Models 4" loading="lazy">
+    <img src="images/custom-models-7.webp" alt="Custom Models 7" loading="lazy">
+    <img src="images/custom-model-30.webp" alt="Custom Model 30" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/custom-model-32.webp" alt="Custom Model 32" loading="lazy">
+    <img src="images/custom-model-33.webp" alt="Custom Model 33" loading="lazy">
+    <img src="images/custom-model-21.webp" alt="Custom Model 21" loading="lazy">
+    <img src="images/custom-model-23.webp" alt="Custom Model 23" loading="lazy">
+    <img src="images/custom-model-25.webp" alt="Custom Model 25" loading="lazy">
+    <img src="images/custom-model-28.webp" alt="Custom Model 28" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/custom-model-17.webp" alt="Custom Model 17" loading="lazy">
+    <img src="images/custom-model-16.webp" alt="Custom Model 16" loading="lazy">
+    <img src="images/custom-model-20.webp" alt="Custom Model 20" loading="lazy">
+    <img src="images/custom-model-18.webp" alt="Custom Model 18" loading="lazy">
+    <img src="images/custom-models-10.webp" alt="Custom Models 10" loading="lazy">
+    <img src="images/custom-models-11.webp" alt="Custom Models 11" loading="lazy">
+  </div>
+  <div class="row">
+    <img src="images/custom-models-13.webp" alt="Custom Models 13" loading="lazy">
+    <img src="images/custom-models-14.webp" alt="Custom Models 14" loading="lazy">
+    <img src="images/custom-model-35.webp" alt="Custom Model 35" loading="lazy">
+    <img src="images/custom-model-38.webp" alt="Custom Model 38" loading="lazy">
+    <img src="images/custom-model-39.webp" alt="Custom Model 39" loading="lazy">
+    <img src="images/custom-model-40.webp" alt="Custom Model 40" loading="lazy">
+  </div>
+</section>
+<section class="block">
+  <p class="intro">Turn existing still product photography into engaging motion videos, helping customers see the product in action on a moving model and creating more dynamic content for ads, websites, and social media.</p>
+  <h2>Create Motion Video</h2>
+  <div class="row">
+    <video src="videos/3ae4fc8e.mp4" poster="videos/3ae4fc8e.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <video src="videos/c5975351.mp4" poster="videos/c5975351.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <video src="videos/af680d36.mp4" poster="videos/af680d36.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <video src="videos/ef4fdebb.mp4" poster="videos/ef4fdebb.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <video src="videos/165269e8.mp4" poster="videos/165269e8.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    <video src="videos/ff31bc19.mp4" poster="videos/ff31bc19.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+</section>
+<section class="block">
+  <p class="intro">Create imagery that reflects a wider community by showcasing diverse body types, backgrounds, ages, and styles, helping more customers feel seen, represented, and connected.</p>
+  <h2>Diversity</h2>
+  <div class="row">
+    <img src="images/model-diversity-7.webp" alt="Model Diversity 7" loading="lazy">
+    <img src="images/model-diversity-12.webp" alt="Model Diversity 12" loading="lazy">
+    <img src="images/model-diversity-15.webp" alt="Model Diversity 15" loading="lazy">
+    <img src="images/model-diversity-13.webp" alt="Model Diversity 13" loading="lazy">
+  </div>
+  <div class="row row--wide">
+    <img src="images/models-group.webp" alt="TWL Models group" loading="lazy">
+  </div>
+</section>
+
+    <footer><a href="/">kellycestari.com</a></footer>
+  </div>
+
+  <div class="lightbox" aria-hidden="true"><img alt=""></div>
+  <script>
+    // Size each item by its shape so a row fills the width at one height
+    const fit = (el, w, h) => { if (w && h) el.style.flexGrow = (w / h).toFixed(4); };
+    document.querySelectorAll('.row:not(.row--small) img').forEach(img => {
+      const go = () => fit(img, img.naturalWidth, img.naturalHeight);
+      img.complete ? go() : img.addEventListener('load', go);
+    });
+    document.querySelectorAll('.row:not(.row--small) video').forEach(v => {
+      const go = () => fit(v, v.videoWidth, v.videoHeight);
+      v.readyState >= 1 ? go() : v.addEventListener('loadedmetadata', go);
+    });
+
+    const box = document.querySelector('.lightbox');
+    const big = box.querySelector('img');
+    document.querySelectorAll('.row img').forEach(img => {
+      img.addEventListener('click', () => { big.src = img.src; big.alt = img.alt; box.classList.add('open'); });
+    });
+    box.addEventListener('click', () => box.classList.remove('open'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') box.classList.remove('open'); });
+  </script>
+</body>
+</html>
